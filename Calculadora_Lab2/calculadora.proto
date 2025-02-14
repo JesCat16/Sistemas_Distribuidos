@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service Greeter {
+    rpc Soma(Valores) returns (Resultado){}
+    rpc Subtracao(Valores) returns (Resultado){}
+    rpc Multiplicacao(Valores) returns (Resultado){}
+    rpc Divisao(Valores) returns (Resultado){}
+}
+
+message Valores {
+    double valor1 = 1;
+    double valor2 = 2;
+}
+
+message Resultado {
+    double resultado = 1;
+}
